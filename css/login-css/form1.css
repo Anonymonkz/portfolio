@@ -46,7 +46,7 @@ body{
     font-size: 20px;
     text-align: center;
 
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
         top: 30%;
         font-size: 18px;
     }
@@ -54,7 +54,7 @@ body{
     @media screen and (min-width: 1920px) {
         top: 32%;
         font-size: 18px;
-    }
+    } */
 }
 
 
@@ -95,38 +95,11 @@ body{
     color: rgb(255, 255, 255);
     border-radius: 5px;
     font-size: 19px;
-    margin-bottom: 10px;
 
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
         position: relative;
         bottom: -90px;
-    }
-    @media screen and (min-width:320px)  {
-        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-        
-    }
-    @media screen and (min-width:481px)  {
-        /* smartphones, Android phones, landscape iPhone */
-        
-    }
-    @media screen and (min-width:641px)  {
-        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-        
-    }
-    @media screen and (min-width:961px)  {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        
-    }
-    @media screen and (min-width:1025px) {
-        /* big landscape tablets, laptops, and desktops */
-        
-    }
-    @media screen and (min-width:1281px) {
-        /* hi-res laptops and desktops */
-        
-    }
-    
-    
+    } */
 }
 
 .username{
@@ -152,30 +125,6 @@ body{
         position: relative;
         bottom: -90px;
     }
-    @media screen and (min-width:320px)  {
-        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-        
-    }
-    @media screen and (min-width:481px)  {
-        /* smartphones, Android phones, landscape iPhone */
-        
-    }
-    @media screen and (min-width:641px)  {
-        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-        
-    }
-    @media screen and (min-width:961px)  {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        
-    }
-    @media screen and (min-width:1025px) {
-        /* big landscape tablets, laptops, and desktops */
-        
-    }
-    @media screen and (min-width:1281px) {
-        /* hi-res laptops and desktops */
-        
-    }
 }
 
 /* .login {
@@ -196,38 +145,6 @@ body{
     @media screen and (max-width: 1024px) {
         margin-top: -140px;
     }
-
-    @media screen and (max-width: 1280px) {
-        margin-top: -140px;
-    }
-    @media screen and (min-width:320px)  {
-        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-        margin-top: -110px;
-    }
-
-    @media screen and (min-width:481px)  {
-        /* smartphones, Android phones, landscape iPhone */
-        margin-top: -160px;
-    }
-
-    @media screen and (min-width:641px)  {
-        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-
-    }
-    @media screen and (min-width:961px)  {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-    }
-    
-    @media screen and (min-width:1025px) {
-        /* big landscape tablets, laptops, and desktops */
-
-    }
-
-    @media screen and (min-width:1281px) {
-        /* hi-res laptops and desktops */
-        
-    }
 }
 
 
@@ -247,4 +164,103 @@ body{
 
 .error-msg-second-line{
     display: block;
+}
+
+
+@media screen and (min-width:320px)  {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .login-header{
+        top: 33%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -90px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -50%;
+    }
+}
+
+@media (min-width:480px)  {
+    /* smartphones, Android phones, landscape iPhone */
+    .login-header{
+        top: 35%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -10px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -100px;
+    }
+}
+@media (min-width:600px)  {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .login-header{
+        top: 30%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -80px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -160px;
+    }
+}
+@media (min-width:801px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .login-header{
+        top: 35%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -10px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -100px;
+    }
+}
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .login-header{
+        top: 35%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -10px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -100px;
+    }
+}
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+    .login-header{
+        top: 33%;
+        font-size: 18px;
+    }
+
+    .username, .password{
+        position: relative;
+        bottom: -10px;
+    }
+
+    .login-msg-error-holder{
+        margin-top: -130px;
+    }
 }
