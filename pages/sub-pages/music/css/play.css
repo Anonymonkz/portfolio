@@ -1,0 +1,36 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(180deg, #14ce52, #00415a);
+    position: relative;
+    /* overflow-x: hidden;
+    overflow-y: hidden; */
+}
+
+.main{
+    width: 100%;
+    @media screen and (min-width: 720px){
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 20px;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.container-play{
+    border-radius: 20px;
+    height: auto;
+
+}
+
+.embed{
+    width: 100%;
+    height: 352px;
+    border-radius:12px
+}
+
+.playlist{
+    justify-content: center;
+}
