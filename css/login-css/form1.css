@@ -32,11 +32,11 @@ body{
     box-shadow: 0px 0px 5px 2px black;
     background-color: #35155f8e;
 
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
         height: 80%;
         width: 80%;
         border-radius: 40px;
-    }
+    } */
 
 }
 
@@ -121,10 +121,10 @@ body{
     cursor: pointer;
     outline: none;
     border-radius: 5px;
-    @media screen and (max-width: 720px) {
+    /* @media screen and (max-width: 720px) {
         position: relative;
         bottom: -90px;
-    }
+    } */
 }
 
 /* .login {
@@ -142,9 +142,9 @@ body{
     margin-top: -170px;
     grid-row: 1;
 
-    @media screen and (max-width: 1024px) {
+    /* @media screen and (max-width: 1024px) {
         margin-top: -140px;
-    }
+    } */
 }
 
 
@@ -169,6 +169,12 @@ body{
 
 @media screen and (min-width:320px)  {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    .main{
+        height: 80%;
+        width: 80%;
+        border-radius: 20px;
+    }
+
     .login-header{
         top: 33%;
         font-size: 18px;
@@ -176,24 +182,38 @@ body{
 
     .username, .password{
         position: relative;
-        bottom: -90px;
+        bottom: -150px;
+        width: 90%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -300%;
+        width: 90%;
     }
 
     .login-msg-error-holder{
-        margin-top: -50%;
+        margin-top: -30%;
     }
 }
 
 @media (min-width:480px)  {
     /* smartphones, Android phones, landscape iPhone */
     .login-header{
-        top: 35%;
+        top: 30%;
         font-size: 18px;
     }
 
     .username, .password{
         position: relative;
-        bottom: -10px;
+        bottom: -100px;
+        width: 130%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -100px;
+        width: 130%;
     }
 
     .login-msg-error-holder{
@@ -202,6 +222,11 @@ body{
 }
 @media (min-width:600px)  {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .main{
+        height: 80%;
+        width: 80%;
+        border-radius: 40px;
+    }
     .login-header{
         top: 30%;
         font-size: 18px;
@@ -209,7 +234,14 @@ body{
 
     .username, .password{
         position: relative;
-        bottom: -80px;
+        bottom: -140px;
+        width: 180%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -170px;
+        width: 180%;
     }
 
     .login-msg-error-holder{
@@ -218,6 +250,12 @@ body{
 }
 @media (min-width:801px)  {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .main{
+        height: 60%;
+        width: 40%;
+        border-radius: 20px;
+    }
+
     .login-header{
         top: 35%;
         font-size: 18px;
@@ -226,6 +264,13 @@ body{
     .username, .password{
         position: relative;
         bottom: -10px;
+        width: 100%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -20px;
+        width: 100%;
     }
 
     .login-msg-error-holder{
@@ -242,6 +287,13 @@ body{
     .username, .password{
         position: relative;
         bottom: -10px;
+        width: 140%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -20px;
+        width: 140%;
     }
 
     .login-msg-error-holder{
@@ -251,16 +303,23 @@ body{
 @media (min-width:1281px) {
     /* hi-res laptops and desktops */
     .login-header{
-        top: 33%;
+        top: 35%;
         font-size: 18px;
     }
 
     .username, .password{
         position: relative;
         bottom: -10px;
+        width: 190%;
+    }
+
+    .login, .signup{
+        position: relative;
+        bottom: -20px;
+        width: 190%;
     }
 
     .login-msg-error-holder{
-        margin-top: -130px;
+        margin-top: -90px;
     }
 }

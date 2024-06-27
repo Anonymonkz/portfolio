@@ -1,6 +1,6 @@
 body{
     height: 100vh;
-    width: 100vw;
+    width: 90vw;
     background-image: linear-gradient(180deg, #14ce52, #00415a);
     position: relative;
     /* overflow-x: hidden;
@@ -8,12 +8,14 @@ body{
 }
 
 .main{
-    width: 100%;
-    @media screen and (min-width: 720px){
+    width: 100vw;
+    height: auto;
+    /* background-image: linear-gradient(180deg, #14ce52, #00415a); */
+    @media screen and (min-width: 320px){
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: 20px;
+        margin-left: 0px;
         transform: translate(-50%, -50%);
     }
 
