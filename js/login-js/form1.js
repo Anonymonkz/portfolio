@@ -14,7 +14,7 @@ function login(n) {
     n.preventDefault();
     if (users.some(o => username.value === o.username && password.value === o.password)) {
         alert("Login Successful");
-        location=("pages/main-page/main.html");
+        location=("/pages/main-page/main.html");
     }
     else {
         loginErrorMsg.style.opacity = 1;
