@@ -111,6 +111,7 @@ if (action === 'clear') {
         calculator.dataset.modValue = ''
         calculator.dataset.operator = ''
         calculator.dataset.previousKeyType = ''
+        document.getElementById('desc').innerText = ''
     } else {
         key.textContent = 'AC'
     }
