@@ -7,6 +7,7 @@ body{
     width: 100vw;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-image: linear-gradient(256deg,#3d009e, #02e0e7);
+    background-attachment: fixed;
     display: grid;
     margin: 0;
     align-items: center;
@@ -131,7 +132,19 @@ li{
 
 @media (min-width:320px)  {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-    
+    .flip-card{
+      width: 600px;
+      height: 600px;
+      perspective: 1000px;
+      display: grid;
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .flip-card-back{
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
 }
 @media (min-width:480px)  {
     /* smartphones, Android phones, landscape iPhone */
@@ -139,11 +152,35 @@ li{
 }
 @media (min-width:600px)  {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .flip-card{
+      width: 600px;
+      height: 600px;
+      perspective: 1000px;
+      display: grid;
+      grid-column: 2;
+      grid-row: 2;
+    }
 
+    .flip-card-back{
+      display: grid;
+      align-content: center;
+      justify-content: center;
+    }
 }
 @media (min-width:801px)  {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-    
+    .flip-card {
+      background-color: transparent;
+      width: 350px;
+      height: 350px;
+      perspective: 1000px;
+      display: grid;
+      grid-column: 3;
+      grid-row: inherit;
+    }
+    .flip-card-back{
+      display: block;
+    }
 }
 @media (min-width:1025px) {
     /* big landscape tablets, laptops, and desktops */
