@@ -4,7 +4,7 @@ const loginErrorMsg = document.getElementById("login-msg-error")
 const username = document.getElementById("username-field")
 const password = document.getElementById("password-field")
 const users = [
-    { username: 'kinasta123', password: 'secret' },
+    { username: 'user', password: '1234' },
     { username: 'anonymonkz', password: '00036' },
     { username: 'slyckster', password: 'sheeshable' },
     { username: 'guerrero diff', password: 'jgdiff123' },

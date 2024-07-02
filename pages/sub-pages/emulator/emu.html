@@ -2,59 +2,65 @@
     <head>
         <!--HTML file auto generated using EmulatorJS codehelper-->
         <link rel="stylesheet" href="css/emulator.css">
-        <script src="/assets/emulator/emu/EmulatorJS-4.0.12/data/loader.js"></script>
+        <script src="emu/EmulatorJS-4.0.12/data/loader.js"></script>
         <link rel="icon" href="assets/joystick.svg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <title>EmuPortal</title>
     </head>
     <body>
-        <div class="emus-list">
-            <div class="emu one">
-                <h1><span>Medabots - <a class="metabee">Metabee</a> Version</span></h1>
-                <div id="game-one"></div>
-                    <iframe class="emu1" src="../emulator/emus/mmv.html"></iframe>
+        <div class="main">
+            <div class="container-emu container">
+                <div class="emus-list row">
+                    <div class="emu one col-md-4 col-sm-6 col-lg-4">
+                        <h1><span>Medabots - <a class="metabee">Metabee</a> Version</span></h1>
+                        <div id="game-one"></div>
+                            <iframe class="emu1" src="../emulator/emus/mmv.html"></iframe>
+                    </div>
+
+                    <div class="emu two col-md-4 col-sm-6 col-lg-4">
+                        <h1><span>Medabots - <a class="rokusho">Rokusho</a> Version</span></h1>
+                        <div id="game-two"></div>
+                        <iframe class="emu1" src="../emulator/emus/mrv.html"></iframe>
+                    </div>
+
+                    <div class="emu three col-md-4 col-sm-6 col-lg-4">
+                    <h1 class="mnl"><span><a class="mario">Mario</a> And <a class="luigi">Luigi</a> Superstar Saga</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/malss.html"></iframe>
+                    </div>
+
+                    <div class="emu four col-md-4 col-sm-6 col-lg-4">
+                        <h1 class="pmd"><span>Pokemon Mystery Dungeon - Red Rescue Team</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/pmdrrt.html"></iframe>
+                    </div>
+
+                    <div class="emu five col-md-4 col-sm-6 col-lg-4">
+                        <h1 class="pfr"><span>Pokemon Fire Red</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/pfr.html"></iframe>
+                    </div>
+
+                    <div class="emu six col-md-4 col-sm-6 col-lg-4">
+                        <h1 class="pe"><span>Pokemon Emerald</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/pe.html"></iframe>
+                    </div>
+
+                    <div class="emu seven col-md-4 col-sm-6 col-lg-4">
+                        <h1 class="pe"><span>The Legend of Zelda: The Minish Cap</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/tloztmc (USA).html"></iframe>
+                    </div>
+
+                    <div class="emu eight col-md-4 col-sm-6 col-lg-4">
+                        <h1 class="pe"><span>Castlevania Double Pack</span></h1>
+                        <div id="game-three"></div>
+                        <iframe class="emu1" src="../emulator/emus/cdp.html"></iframe>
+                    </div>
+                </div>
             </div>
-
-            <div class="emu two">
-                <h1><span>Medabots - <a class="rokusho">Rokusho</a> Version</span></h1>
-                <div id="game-two"></div>
-                <iframe class="emu1" src="../emulator/emus/mrv.html"></iframe>
-            </div>
-
-            <div class="emu three">
-               <h1 class="mnl"><span><a class="mario">Mario</a> And <a class="luigi">Luigi</a> Superstar Saga</span></h1>
-                <div id="game-three"></div>
-                <iframe class="emu1" src="../emulator/emus/malss.html"></iframe>
-            </div>
-
-            <div class="emu four">
-                <h1 class="pmd"><span>Pokemon Mystery Dungeon - Red Rescue Team</span></h1>
-                 <div id="game-three"></div>
-                 <iframe class="emu1" src="../emulator/emus/pmdrrt.html"></iframe>
-             </div>
-
-             <div class="emu five">
-                <h1 class="pfr"><span>Pokemon Fire Red</span></h1>
-                 <div id="game-three"></div>
-                 <iframe class="emu1" src="../emulator/emus/pfr.html"></iframe>
-             </div>
-
-             <div class="emu six">
-                <h1 class="pe"><span>Pokemon Emerald</span></h1>
-                 <div id="game-three"></div>
-                 <iframe class="emu1" src="../emulator/emus/pe.html"></iframe>
-             </div>
-
-             <div class="emu seven">
-                <h1 class="pe"><span>The Legend of Zelda: The Minish Cap</span></h1>
-                 <div id="game-three"></div>
-                 <iframe class="emu1" src="../emulator/emus/tloztmc (USA).html"></iframe>
-             </div>
-
-             <div class="emu eight">
-                <h1 class="pe"><span>Castlevania Double Pack</span></h1>
-                 <div id="game-three"></div>
-                 <iframe class="emu1" src="../emulator/emus/cdp.html"></iframe>
-             </div>
         </div>
     </body>
     </body>

@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Open+Sans&display=swap);.navbar[data-v-ab20e2ae] {
+    font-family: Abel,sans-serif;
+    background-color: transparent;
+    padding: 30px
+}
+
+
+li{
+    list-style: none;
+}
+
+.toggle{
+    float: right;
+    margin-right: 30px;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.nav-collapse{
+    display: none;
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+.background-image{
+    height: 400px;
+}
+
+button:hover{
+    background-color: rgba(35, 174, 184, 0.74);
+}
+
+.navbar-toggler{
+    overflow-anchor: none;
+}
+
+.nav-item{
+    margin: 10px;
+}
+
+ul li:before{
+    content: "\►";
+    color: #7c05eb;
+    font-weight: 700;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+@media (min-width:320px)  {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    
+}
+@media (min-width:480px)  {
+    /* smartphones, Android phones, landscape iPhone */
+
+}
+@media (min-width:600px)  {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+}
+@media (min-width:801px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    
+}
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+
+}
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+    
+}
