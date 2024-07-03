@@ -4,59 +4,179 @@
     padding: 30px
 }
 
+*, :after, :before{
+    box-sizing: border-box;
+}
 
-li{
+body{
+    height: 100vh;
+    
+    font-family: Abel,sans-serif;
+
+}
+
+.navbar-toggler{
+    border-color: transparent;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    background-color: rgba(0, 255, 255, 0.219);
+}
+
+.navbar-toggler:hover{
+    background-color: rgba(0, 255, 255, 0.219);
+}
+
+.nav_bar{
+    background-color: transparent;
+}
+
+.navbr{
+    transition: transform .7s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.navbr:hover{
+    transform: rotate(360deg);
+}
+
+.home-cont{
+    background-color: rgb(21, 52, 72);
+    display: block;
+    height: 75em;
+}
+
+.about-cont{
+    background-color: rgb(60, 91, 111);
+    color: rgb(249, 115, 0);
+}
+
+.skills-cont{
+    background-color: rgb(148, 137, 121);
+    color: rgb(21, 52, 72);
+}
+
+.works-cont{
+    background-color: rgb(223, 208, 184);
+    color: rgb(50, 1, 47);
+}
+
+.skills-cont h1{
+    font-weight: 800;
+}
+
+.content{
+    padding-top: 200px;
+    display: flex;
+}
+
+h1{
+    line-height: 1.2;
+    width: 100%;
+    z-index: 4;
+    position: relative;
+}
+
+.hi{
+    transition: .6s ease-out;
+    font-size: 80px;
+    margin: -3px;
+    font-weight: 600;
+    user-select: none;
+    color: white;
+}
+
+.hi:hover{
+    font-size: 150px;
+}
+
+.fewd{
+    font-size: 40px;
+    color: rgb(23, 157, 167);
+    width: 100%;
+}
+
+.about-content{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 5px solid rgb(182, 199, 170);
+    border-bottom: 5px solid rgb(182, 199, 170);
+    color: rgb(249, 115, 0);
+}
+
+.background-img{
+    top: -100px;
+}
+
+img{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+.skill-card-header{
+    border-left: 3px solid rgb(21, 52, 72);
+    border-right: 3px solid rgb(21, 52, 72);
+    text-align: center;
+}
+
+/* .skill-card-body{
+    height: 200px;
+} */
+
+.skill-card-footer{
+    border-left: 3px solid rgb(21, 52, 72);
+    border-right: 3px solid rgb(21, 52, 72);
+
+}
+
+.skill-card{
+    border-top: 3px solid rgb(21, 52, 72);
+    border-bottom: 3px solid rgb(21, 52, 72);
+    box-shadow: 0 0 20px rgb(117, 109, 97);
+    height: 350px;
+    padding: 1.25rem;
+    user-select: none;
+}
+
+ul{
     list-style: none;
 }
-
-.toggle{
-    float: right;
-    margin-right: 30px;
-}
-
-button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: 500ms;
-}
-
-.nav-collapse{
-    display: none;
-}
-
-.navbar-toggler{
-    border: none;
-}
-
-.background-image{
-    height: 400px;
-}
-
-button:hover{
-    background-color: rgba(35, 174, 184, 0.74);
-}
-
-.navbar-toggler{
-    overflow-anchor: none;
-}
-
-.nav-item{
-    margin: 10px;
-}
-
-ul li:before{
+.skills li::before{
     content: "\►";
-    color: #7c05eb;
+    color: rgb(21, 52, 72);
     font-weight: 700;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+}
+
+.btn-grp{
+    flex-wrap: wrap;
+}
+
+.btn-outline{
+    background-color: #fff;
+    border: 1px solid rgb(21, 52, 72);
+    color: rgb(21, 52, 72);
+}
+
+.btn-outline:hover{
+    background-color: rgb(21, 52, 72);
+    color: #fff;
 }
 
 @media (min-width:320px)  {
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-    
+    img{
+        margin-left: 0%;
+    }
+
+    .background-img{
+        top: -10px;
+    }
 }
 @media (min-width:480px)  {
     /* smartphones, Android phones, landscape iPhone */
@@ -64,17 +184,61 @@ ul li:before{
 }
 @media (min-width:600px)  {
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .background-img{
+        top: -20px;
+    }
 
+    .about-cont{
+        height: 75em;
+    }
+
+    .skills-cont{
+        height: 130em;
+    }
+
+    .skill-card-body{
+        height: 200px;
+    }
 }
+
+@media (min-width:768px) {
+    /* big landscape tablets, laptops, and desktops */
+    .about-cont{
+        height: 50em;
+    }
+
+    .skills-cont{
+        height: 80em;
+    }
+
+    .skill-card-body{
+        height: 180px;
+    }
+
+    .skill-card{
+        height: 380px;
+    }
+}
+
 @media (min-width:801px)  {
     /* tablet, landscape iPad, lo-res laptops ands desktops */
-    
+    img{
+        margin-left: 0%;
+    }
 }
+
+@media (min-width:992px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .navbar-collapse{
+        justify-content: flex-end;
+    }
+}
+
 @media (min-width:1025px) {
     /* big landscape tablets, laptops, and desktops */
-
+    
 }
 @media (min-width:1281px) {
     /* hi-res laptops and desktops */
-    
+
 }
