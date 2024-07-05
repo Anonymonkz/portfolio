@@ -382,6 +382,10 @@ a{
     .navbar-collapse{
         justify-content: flex-end;
     }
+
+    .dropdown ul{
+        text-align: end;
+    }
 }
 
 @media (min-width:1025px) {
