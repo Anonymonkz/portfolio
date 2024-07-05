@@ -5,10 +5,19 @@ const popUp = document.getElementById('t-pop')
 const messageBox = document.getElementById('textarea')
 
 
-formButton.addEventListener('click', toggleForm);
+formButton.addEventListener('click', (t) => {
+    toggleForm(t)
+});
 
-function toggleForm() {
-    formContact.classList.toggle('contact-form-toggle');
+function toggleForm(t) {
+    if (formButton.toggleAttribute(true)) {
+        formContact.style.maxWidth = '100%';
+        formContact.style.maxHeight = '948px';
+    }
+    else {
+        formContact.style.maxWidth = null;
+        formContact.style.maxHeight = null;
+    }
 }
 
 submitButton.addEventListener('click', (a) => {
@@ -17,7 +26,7 @@ submitButton.addEventListener('click', (a) => {
 
 function alertPop(a) {
     if (messageBox.value){
-    window.location.hash = document.getElementById('contact')
+    a.preventDefault();
     popUp.style.opacity = 1;
 
     setTimeout(() => {
