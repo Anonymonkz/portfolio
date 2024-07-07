@@ -1,7 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Open+Sans&display=swap);.navbar[data-v-ab20e2ae] {
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Open+Sans&display=swap);
+
+.navbar {
     font-family: Abel,sans-serif;
     background-color: transparent;
-    padding: 30px
+    padding: 10px;
+    transition: background-color .5s ease-in-out;  transition: .5s ease-in-out;
 }
 
 *, :after, :before{
@@ -12,6 +15,11 @@ body{
     height: 100vh;
     font-family: Abel,sans-serif;
 
+}
+
+.navbar-scrolled {
+    background-color: rgb(9, 129, 153); /* Change this to the desired color */
+    padding: 20px;
 }
 
 .navbar-toggler{
@@ -25,10 +33,6 @@ body{
 
 .navbar-toggler:hover{
     background-color: rgba(0, 255, 255, 0.219);
-}
-
-.nav_bar{
-    background-color: transparent;
 }
 
 .navbr{
@@ -309,6 +313,47 @@ a{
 
 .footer p{
     margin: 1rem;
+}
+
+.w-role{
+    font-weight: bolder;
+}
+
+.work-card{
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.486);
+    height: 260px;
+}
+
+.w-btn{
+    border: 1px solid #24305e;
+    background-color: transparent;
+    color: #24305e;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100px;
+    transition: 1s;
+}
+
+.w-btn:hover{
+    border: 1px solid #24305e;
+    background-color: #24305e;
+    color: #f8e9a1;
+    width: 200px;
+    transition: 1s;
+}
+
+.description{
+    border-left: 5px solid #24305e;
+    padding-left: 10px;
+}
+
+.div-ctrl{
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    font-size: 30px;
 }
 
 @media (min-width:320px)  {

@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Open+Sans&display=swap);
+
+body{
+    /* background-color: rgba(14, 32, 59, 0.678) !important; */
+    background-image: url('/pages/sub-pages/shortcut-mng/assets/video_preview.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white !important;
+    height: 100vh;
+}
+
+.shrtct{
+    margin-top: 100px;
+    background-color: rgba(10, 37, 54, 0.603);
+    border-radius: 10px;
+    padding: 30px 0 30px 0;
+    animation: floatAnimation 3s ease-in-out infinite, resonatingShadow 2s ease-in-out infinite; /* Adjust animation durations as needed */
+}
+
+.btn-prp{
+    height: 40px;
+    margin: 0 30px;
+}
+
+.icon{
+    width: 1em;
+    height: 1em;
+    color: rgb(33, 231, 221);
+}
+
+.label{
+    margin-top: 50px;
+    font-family: Abel,sans-serif;
+    color: rgb(100, 6, 6);
+    animation: resonatingText 1s ease-in-out infinite;
+    font-weight: 700;
+
+}
+
+.shrtct-cnt{
+    cursor: pointer;
+    padding: 10px 10px 0 10px;
+    margin: 0 10px 0 10px;
+}
+
+.modal{
+    color: rgb(152, 236, 236) !important;
+}
+
+.form-control{
+    margin: 10px;
+    background-color: transparent !important;
+    color: rgb(152, 236, 236) !important;
+    border-color: rgb(12, 172, 164) !important;
+}
+
+::placeholder{
+    color: rgba(30, 128, 128, 0.555) !important;
+}
+
+.modal-content{
+    background-color: rgb(14, 43, 70) !important;
+}
+
+.shortcut{
+    transition: .5s ease-in;
+    width: 100px !important;
+    border: 1px solid black;
+    margin: 0 10px 10px;
+    border-radius: 20px;
+}
+
+.shortcut:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 4px 2px rgb(12, 176, 182);
+}
+
+
+/* Define the animation */
+@keyframes modalBlowUp {
+  0% {
+    transform: scale(0.8); /* Start scale */
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    transform: scale(1); /* End scale */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply the animation to the modal-dialog when it appears */
+.modal.show .modal-dialog {
+  animation: modalBlowUp 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   /* Adjust timing function as needed */
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust as needed for desired float height */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes resonatingShadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 10px 5px rgb(9, 241, 183);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes resonatingText {
+    0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 237, 245, 0.993);
+    }
+    100% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
