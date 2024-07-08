@@ -1,0 +1,465 @@
+@import url(https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Open+Sans&display=swap);
+
+.navbar {
+    font-family: Abel,sans-serif;
+    background-color: transparent;
+    padding: 10px;
+    transition: background-color .5s ease-in-out, .5s ease-in-out;
+}
+
+*, :after, :before{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: Abel,sans-serif;
+
+}
+
+.navbar-scrolled {
+    background-color: rgb(9, 129, 153); /* Change this to the desired color */
+    padding: 20px;
+}
+
+.navbar-toggler{
+    border-color: transparent;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    background-color: rgba(0, 255, 255, 0.219);
+}
+
+.navbar-toggler:hover{
+    background-color: rgba(0, 255, 255, 0.219);
+}
+
+.navbr{
+    transition: transform .7s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.navbr:hover{
+    transform: rotate(360deg);
+}
+
+.home-cont{
+    background-color: rgb(21,40,47);
+}
+
+.about-cont{
+    background-color: rgb(43,46,39);
+    color: rgb(249, 115, 0);
+}
+
+.skills-cont{
+    background-color: rgb(24,53,74);
+    color: rgb(15, 160, 128);
+}
+
+.works-cont{
+    background-color: rgb(60,112,143);
+    color: rgb(50, 1, 47);
+}
+
+.contact-cont{
+    background-color: rgba(36,42,39,255);
+    color: rgb(60,112,143);
+}
+
+.skills-cont h1{
+    font-weight: 700;
+    font-family: Abel,sans-serif;
+}
+
+.content{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+}
+
+h1{
+    line-height: 1.2;
+    width: 100%;
+    z-index: 4;
+    position: relative;
+    user-select: none;
+}
+
+.hi{
+    transition: .6s ease-out;
+    font-size: 80px;
+    margin: -3px;
+    font-weight: 600;
+    user-select: none;
+    color: white;
+}
+
+.hi:hover{
+    font-size: 150px;
+}
+
+.fewd{
+    font-size: 40px;
+    color: rgb(23, 157, 167);
+    width: 100%;
+    user-select: none;
+}
+
+.about-content{
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 5px solid rgb(182, 199, 170);
+    border-bottom: 5px solid rgb(182, 199, 170);
+    border-radius: 3px;
+    color: rgb(249, 115, 0);
+    user-select: none;
+}
+
+.background-img{
+    top: -100px;
+}
+
+img{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    -webkit-user-drag: none;
+}
+
+.skill-card-header{
+    border-left: 3px solid rgb(21, 52, 72);
+    border-right: 3px solid rgb(21, 52, 72);
+    text-align: center;
+    font-weight: 700;
+}
+
+.skill-card-footer{
+    border-left: 3px solid rgb(21, 52, 72);
+    border-right: 3px solid rgb(21, 52, 72);
+
+}
+
+.skill-card{
+    border-top: 3px solid rgb(21, 52, 72);
+    border-bottom: 3px solid rgb(21, 52, 72);
+    box-shadow: 0 0 20px rgb(15, 24, 31);
+    height: 350px;
+    padding: 1.25rem;
+    user-select: none;
+}
+
+ul{
+    list-style: none;
+}
+.skills li::before{
+    content: "\►";
+    color: rgb(21, 52, 72);
+    font-weight: 700;
+}
+
+.btn-grp{
+    flex-wrap: wrap;
+}
+
+.btn-outline{
+    background-color: #fff;
+    border: 1px solid rgb(21, 52, 72);
+    color: rgb(21, 52, 72);
+}
+
+.btn-outline:hover{
+    background-color: rgb(21, 52, 72);
+    color: #fff;
+}
+
+.btn-out{
+    border: 2px solid rgb(100,147,165);
+    background-color: transparent;
+    color: rgb(100,147,165);
+    font-size: 25px;
+    border-radius: 26px;
+    transition: 1s;
+}
+
+.btn-out:hover{
+    background-color: rgb(100,147,165);
+    color: rgba(58,79,81,255);
+    box-shadow: 0 0 20px rgb(107, 178, 206);
+    border: 2px solid rgb(100,147,165);
+}
+
+.btn-disabled{
+    background-color: rgb(100,147,165);
+    color:  rgba(58,79,81,255);
+    border-radius: 25px;
+}
+
+.btn-disabled img{
+    filter: invert(10%) sepia(2%) saturate(3466%) hue-rotate(97deg) brightness(91%) contrast(83%);
+}
+
+.btn-disabled:hover{
+    background-color: rgb(100,147,165);
+}
+
+.first-column{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.h2{
+    font-size: 2rem;
+}
+
+.contact-image{
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(107, 178, 206);
+}
+
+.cntc{
+    user-select: none;
+
+}
+
+img.comment{
+    color: transparent;
+    width: 20px; 
+}
+
+.body-control-form{
+    background-color: transparent;
+    color: rgb(60,112,143);
+}
+
+.contact-form{
+    max-width: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-group label{
+    margin-bottom: 1rem;
+}
+
+textarea{
+    resize: none;
+    height: 86px;
+}
+
+.btn-sbmt{
+    width: 100%;
+    background-color: transparent;
+    color: rgb(100,147,165);
+    border: 1px solid rgb(100,147,165);
+}
+
+.btn-sbmt:hover{
+    background-color: rgb(100,147,165);
+    color: rgba(36,42,39,255);
+}
+
+.information-card{
+    background-color: rgba(199,211,232,255);
+    border-radius: 10px;
+}
+
+.information-card img{
+    width: 50px;
+    margin: 10px;
+    transition: 350ms;
+}
+
+img.cr{
+    border-radius: 50%;
+}
+
+.information-card img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 2px 2px 3px black;
+}
+
+a{
+    text-decoration: none;
+    padding: 0%;
+}
+
+.toast-pop{
+    overflow: visible;
+    z-index: 1;
+    margin-left: auto;
+    opacity: 0;
+    transition: 1s ease-in;
+    pointer-events: none;
+}
+
+.footer{
+    padding: 5px;
+    background-image: url('/assets/portfolio-assets/footer1.png');
+    background-size: cover;
+    background-position-y: 30%;
+    color: rgb(129, 173, 214);
+    font-weight: 700;
+}
+
+.footer p{
+    margin: 1rem;
+}
+
+.w-role{
+    font-weight: bolder;
+}
+
+.work-card{
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.486);
+    height: 260px;
+}
+
+.w-btn{
+    border: 1px solid #24305e;
+    background-color: transparent;
+    color: #24305e;
+    padding: 10px;
+    border-radius: 25px;
+    width: 100px;
+    transition: 1s;
+}
+
+.w-btn:hover{
+    border: 1px solid #24305e;
+    background-color: #24305e;
+    color: #f8e9a1;
+    width: 200px;
+    transition: 1s;
+}
+
+.description{
+    border-left: 5px solid #24305e;
+    padding-left: 10px;
+}
+
+.div-ctrl{
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    font-size: 30px;
+}
+
+@media (min-width:320px)  {
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+    img{
+        margin-left: 0%;
+    }
+
+    .background-img{
+        top: -10px;
+    }
+
+    .skill-card-body{
+        height: 150px;
+    }
+
+    .first-column{
+        border-bottom: 10px solid rgba(199,211,232,255);
+        border-right: none;
+    }
+
+    .contact-form{
+        transition: max-height 1s;
+    }
+}
+
+@media (min-width:480px)  {
+    /* smartphones, Android phones, landscape iPhone */
+
+}
+
+@media (min-width:600px)  {
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+    .background-img{
+        top: -20px;
+    }
+
+    .skill-card-body{
+        height: 200px;
+    }
+}
+
+@media (min-width:768px) {
+    /* big landscape tablets, laptops, and desktops */
+    .skill-card-body{
+        height: 180px;
+    }
+
+    .skill-card{
+        height: 380px;
+    }
+    
+    .first-column{
+        border-right: 10px solid rgba(199,211,232,255);
+        border-bottom: none;
+    }
+
+    .contact-form{
+        transition: max-width 1s;
+    }
+}
+
+@media (min-width:801px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    img{
+        margin-left: 0%;
+    }
+}
+
+@media (min-width:992px)  {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .navbar-collapse{
+        justify-content: flex-end;
+    }
+
+    .dropdown ul{
+        text-align: end;
+    }
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+      --text: #121013;
+      --background: #f7f7f8;
+      --primary: #43394c;
+      --secondary: #ad9cba;
+      --accent: #7e5e97;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #edebee;
+      --background: #060607;
+      --primary: #bcb2c5;
+      --secondary: #564563;
+      --accent: #896aa1;
+    }
+  }
+  
