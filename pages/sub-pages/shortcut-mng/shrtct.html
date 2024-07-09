@@ -21,7 +21,7 @@
             <div class="d-flex mb-2 align-items-center">
                 <div class="d-flex align-items-center shrtct-cnt">
                     <div  id="shortcutWrap"></div>
-                    <button class="btn-prp btn btn-secondary btn-outline" data-bs-toggle="modal" type="button" data-bs-target="#exampleModal">
+                    <button class="btn-prp btn btn-secondary btn-outline" data-bs-toggle="modal" type="button" data-bs-target="#createModal">
                         <i class="fa-solid fa-plus icon"></i>
                     </button>
                 </div>
@@ -31,11 +31,11 @@
     
     <!-- Modal Form -->
 
-    <div class="modal" tabindex="-1" aria-hidden="true" id="exampleModal" >
+    <div class="modal" tabindex="-1" aria-hidden="true" id="createModal" >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="modalBasicLabel">Modal title</h5>
+              <h5 class="modal-title" id="modalBasicLabel">Create Shortcut</h5>
               <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -49,5 +49,28 @@
           </div>
         </div>
       </div>
+
+      <!-- Edit Modal Form -->
+      <div class="modal" tabindex="-1" aria-hidden="true" id="editModal" >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Edit Shortcut</h5>
+              <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input class="form-control form-control-lg" type="text" placeholder="Name" aria-label=".form-control-lg" id="editShortcutName">
+                <input class="form-control form-control-lg" type="text" placeholder="Enter Website URL" aria-label=".form-control-lg" id="editShortcutUrl">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="closeFormButton">Close</button>
+              <button type="button" class="btn btn-primary" id="saveEditShortcut">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
 </body>
 </html>

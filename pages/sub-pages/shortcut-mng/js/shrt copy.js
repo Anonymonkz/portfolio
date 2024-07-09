@@ -7,11 +7,11 @@ let shortcuts = [
 let editingShortcutId = null;
 
 function getFavicon(url) {
+    // Check if the URL contains a domain, otherwise use a default favicon
     const domain = new URL(url).hostname;
     return `https://www.google.com/s2/favicons?domain=${domain}`;
 }
 
-// Item Wrapper
 function createShortcutElement() {
     const container = document.getElementById('shortcutWrap');
     if (!container) {
@@ -19,12 +19,15 @@ function createShortcutElement() {
         return;
     }
     container.classList.add('row');
+
+    // Clear existing children/shortcuts
     container.innerHTML = '';
 
     shortcuts.forEach((item) => {
         const shortcutItem = document.createElement('div');
         shortcutItem.classList.add('col-2', 'shortcut');
 
+        // Shortcut wrapper
         const shortcutItemWrapper = document.createElement('div');
         shortcutItemWrapper.classList.add('shortcut-item');
         shortcutItemWrapper.addEventListener('click', function(){
@@ -36,27 +39,28 @@ function createShortcutElement() {
         const ellipsisIconWrapper = document.createElement('div');
         ellipsisIconWrapper.classList.add('item-menu-icon-wrapper');
         shortcutItemWrapper.appendChild(ellipsisIconWrapper);
-        
         const ellipsisIcon = document.createElement('i');
+        // ellipsisIcon.addEventListener('click', function(e) {
+        //     e.stopPropagation();
+        //     alert('open menu');
+        // });
         ellipsisIcon.classList.add('fa-solid', 'fa-ellipsis', 'item-menu-icon');
         ellipsisIconWrapper.appendChild(ellipsisIcon);
 
-        // Create menu
+         // Create menu
         const menu = document.createElement('div');
         menu.classList.add('shortcut-menu');
         document.body.appendChild(menu);
 
-        //Edit option
         const editOption = document.createElement('div');
         editOption.classList.add('shortcut-menu-item');
         editOption.textContent = 'Edit';
         editOption.addEventListener('click', function(e) {
             e.stopPropagation();
-            openEditModal(item);
+            openEditModal(item.id);
             menu.style.display = 'none';
         });
 
-        //Delete option
         const deleteOption = document.createElement('div');
         deleteOption.classList.add('shortcut-menu-item');
         deleteOption.textContent = 'Delete';
@@ -86,7 +90,10 @@ function createShortcutElement() {
             menu.style.display = 'none';
         });
 
-        //Shortcut Icon
+
+
+
+        // Website logo
         const shortcutIconWrapper = document.createElement('div');
         shortcutItemWrapper.appendChild(shortcutIconWrapper);
         const shortcutIcon = document.createElement('img');
@@ -94,7 +101,7 @@ function createShortcutElement() {
         shortcutIcon.src = getFavicon(item.url);
         shortcutIconWrapper.appendChild(shortcutIcon);
 
-        //Shortcut Name
+        // Website name
         const shortcutNameWrapper = document.createElement('div');
         shortcutItemWrapper.appendChild(shortcutNameWrapper);
         const shortcutName = document.createElement('span');
@@ -106,7 +113,7 @@ function createShortcutElement() {
     });
 }
 
-//Edit Function
+// Edit shortcut
 function openEditModal(item) {
     editingShortcutId = item.id;
     document.getElementById('editShortcutName').value = item.name;
@@ -119,11 +126,6 @@ function saveEditedShortcut() {
     const nameInput = document.getElementById('editShortcutName').value;
     const urlInput = document.getElementById('editShortcutUrl').value;
 
-    if (!nameInput.trim() || !urlInput.trim()) {
-        alert('Both fields are required.');
-        return;
-    }
-    
     shortcuts = shortcuts.map(shortcut => 
         shortcut.id === editingShortcutId ? { ...shortcut, name: nameInput, url: urlInput } : shortcut
     );
@@ -135,35 +137,31 @@ function saveEditedShortcut() {
     editModal.hide();
 }
 
-//Delete Function
+// Delete shortcut
 function deleteShortcut(id) {
     shortcuts = shortcuts.filter(shortcut => shortcut.id !== id);
     createShortcutElement();
     saveShortcutsToCookie();
 }
 
-//Add Function
 function addShortcut() {
-    const nameInput = document.getElementById('shortcutNameInput').value;
-    const urlInput = document.getElementById('shortcutUrlInput').value;
+    const nameInput = document.getElementById('shortcutNameInput');
+    const urlInput = document.getElementById('shortcutUrlInput');
     const closeButton = document.getElementById('closeFormButton');
 
-    
-    if (!nameInput.trim() || !urlInput.trim()) {
-        alert('Both fields are required.');
-        return;
+    if (nameInput.value && urlInput.value) {
+        const newShortcut = { id: shortcuts.length + 1, name: nameInput.value, url: urlInput.value };
+        shortcuts.push(newShortcut);
+        nameInput.value = '';
+        urlInput.value = '';
+
+        createShortcutElement();
+        saveShortcutsToCookie(); // Save shortcuts to cookie
     }
-
-    const newShortcut = { id: shortcuts.length + 1, name: nameInput, url: urlInput };
-    shortcuts.push(newShortcut);
-
-    createShortcutElement();
-    saveShortcutsToCookie();
-    
-    closeButton.click();
+    closeButton.click(); // Close modal after adding shortcut
 }
 
-//Cookies Function
+// Cookies
 function saveShortcutsToCookie() {
     const jsonShortcuts = JSON.stringify(shortcuts);
     document.cookie = `shortcuts=${jsonShortcuts}; expires=${getCookieExpirationDate()}; path=/`;
@@ -194,7 +192,7 @@ function loadShortcutsFromCookie() {
 
 function getCookieExpirationDate() {
     const expirationDate = new Date();
-    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1); // Expires in 1 year
     return expirationDate.toUTCString();
 }
 
@@ -213,11 +211,13 @@ function addFocusClassToInput() {
     });
 }
 
+// Execute code on load
 document.addEventListener('DOMContentLoaded', function(){
-    loadShortcutsFromCookie();
+    loadShortcutsFromCookie(); // Load shortcuts from cookie
     createShortcutElement();
     addFocusClassToInput();
 
+    // Bind addShortcut function to "Save changes" button click
     const saveButton = document.getElementById('saveShrt');
     if (saveButton) {
         saveButton.addEventListener('click', addShortcut);
@@ -225,18 +225,12 @@ document.addEventListener('DOMContentLoaded', function(){
         console.error("Save changes button not found.");
     }
 
-    const saveEditButton = document.getElementById('saveEditShortcut');
-    if (saveEditButton) {
-        saveEditButton.addEventListener('click', saveEditedShortcut);
-    } else {
-        console.error("Save edit button not found.");
-    }
-
-    const modalElement = document.getElementById('createModal');
-    modalElement.addEventListener('hidden.bs.modal', function () {
-        const nameInput = document.getElementById('shortcutNameInput');
-        const urlInput = document.getElementById('shortcutUrlInput');
-        nameInput.value = '';
-        urlInput.value = '';
-    });
+     // Clear inputs when modal is hidden
+     const modalElement = document.getElementById('exampleModal');
+     modalElement.addEventListener('hidden.bs.modal', function () {
+         const nameInput = document.getElementById('shortcutNameInput');
+         const urlInput = document.getElementById('shortcutUrlInput');
+         nameInput.value = '';
+         urlInput.value = '';
+     });
 });
