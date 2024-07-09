@@ -15,7 +15,6 @@
 body{
     height: 100vh;
     font-family: Abel,sans-serif;
-
 }
 
 /* NAVBAR */
@@ -51,6 +50,10 @@ body{
 
 .navbr:hover{
     transform: rotate(360deg);
+}
+
+.nav-link{
+    color: var(--text);
 }
 
 /* MAIN PROPERTIES */
