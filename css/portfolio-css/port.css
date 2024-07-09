@@ -5,7 +5,7 @@
     background-color: transparent;
     padding: 10px;
     transition: background-color .5s ease-in-out, .5s ease-in-out;
-    z-index: 4;
+    z-index: 5;
 }
 
 *, :after, :before{
