@@ -1,137 +1,131 @@
-html{
-    height: 100%;
+html {
+  height: 100%;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    /* background-color: rgb(56, 56, 56); */
-    background-image: url(../assets/video_preview.gif);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    color: white;
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  /* background-color: rgb(56, 56, 56); */
+  background-image: url(../assets/video_preview.gif);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
 }
 
-.emu{
-    max-width: 100%;
-    max-height: auto;
-    overflow: hidden; 
-    border-radius: 25px;
-    background-color: rgb(75,59,120);
-    box-shadow: 8px 8px 8px 4px rgb(45, 0, 87);
-    margin: 20px;
+.emu {
+  max-width: 100%;
+  max-height: auto;
+  overflow: hidden;
+  border-radius: 25px;
+  background-color: rgb(75, 59, 120);
+  box-shadow: 8px 8px 8px 4px rgb(45, 0, 87);
+  margin: 20px;
 }
 
-h1{
-    text-align: center;
-    user-select: none;
-    text-shadow: 2px 2px black;
-    
+h1 {
+  text-align: center;
+  user-select: none;
+  text-shadow: 2px 2px black;
 }
 
-h1 span{
-    border-radius: 50px;
-    padding: 10px;
-    font-size: 80%;
-    width: 50%;
-    font-weight: 700;
+h1 span {
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 80%;
+  width: 50%;
+  font-weight: 700;
 }
 
-.pmd{
-    font-size: 30px;
+.pmd {
+  font-size: 30px;
 }
 
-.mario{
-    color: rgb(255, 0, 0);
-    text-shadow: 2px 2px black
+.mario {
+  color: rgb(255, 0, 0);
+  text-shadow: 2px 2px black;
 }
 
-.luigi{
-    color: rgb(0, 128, 0);
-    text-shadow: 2px 2px black
+.luigi {
+  color: rgb(0, 128, 0);
+  text-shadow: 2px 2px black;
 }
 
-.metabee{
-    color: rgb(255, 166, 0);
-    text-shadow: 2px 2px black;
+.metabee {
+  color: rgb(255, 166, 0);
+  text-shadow: 2px 2px black;
 }
 
-.rokusho{
-    color: rgb(156, 154, 151);
-    text-shadow: 2px 2px black;
+.rokusho {
+  color: rgb(156, 154, 151);
+  text-shadow: 2px 2px black;
 }
 
-.emu1{
-    border: none;
-    width: 100%;
-    height: 100%;
-    border-radius: 90px;
-    margin: none;
-    padding: none;
-    display: inline-block;
+.emu1 {
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 90px;
+  margin: none;
+  padding: none;
+  display: inline-block;
 }
 
-.skin{
-    position: absolute;
-    width: 700px;
-    height: 650px;
-    z-index: 1;
-    left: -10px;
-    pointer-events: none;
+.skin {
+  position: absolute;
+  width: 700px;
+  height: 650px;
+  z-index: 1;
+  left: -10px;
+  pointer-events: none;
 }
 
-.label{
-    animation: resonatingText .5s ease-in-out infinite;
-    color: rgb(16, 255, 255);
-    font-weight: 700;
+.label {
+  animation: resonatingText 0.5s ease-in-out infinite;
+  color: rgb(16, 255, 255);
+  font-weight: 700;
 }
 
-@media (min-width:320px)  {
-    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-     .emu{
-        width: 600px;
-        height: 600px;
-        justify-items: center;
-        align-items: center;
-     }
+@media (min-width: 320px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .emu {
+    width: 600px;
+    height: 600px;
+    justify-items: center;
+    align-items: center;
+  }
 }
-@media (min-width:480px)  {
-    /* smartphones, Android phones, landscape iPhone */
-
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
 }
-@media (min-width:600px)  {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
 }
-@media (min-width:801px)  {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
 }
-@media (min-width:1025px) {
-    /* big landscape tablets, laptops, and desktops */
-
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
 }
-@media (min-width:1281px) {
-    /* hi-res laptops and desktops */
-    
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
 
 @keyframes resonatingText {
-    0% {
-        text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-    }
-    25% {
-        text-shadow: 0 0 40px rgba(0, 237, 245, 0.993);
-    }
-    50% {
-        text-shadow: 0 0 20px rgba(0, 237, 245, 0.993);
-    }
-    75% {
-        text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
-    }
-    100% {
-        text-shadow: 0 0 40px rgba(0, 237, 245, 0.993);
-    }
+  0% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  25% {
+    text-shadow: 0 0 40px rgba(0, 237, 245, 0.993);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 237, 245, 0.993);
+  }
+  75% {
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 40px rgba(0, 237, 245, 0.993);
+  }
 }
