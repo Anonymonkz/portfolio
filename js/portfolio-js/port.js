@@ -3,6 +3,10 @@ const formContact = document.getElementById("contact-form");
 const submitButton = document.querySelector(".btn-sbmt");
 const popUp = document.getElementById("t-pop");
 const messageBox = document.getElementById("textarea");
+const navItems = document.querySelectorAll(".nav-item");
+const subDropdown = document.querySelector(".dropdown-toggle");
+const navbar = document.querySelector(".navbar-collapse");
+const navbarToggler = document.querySelector(".navbar-toggler");
 
 formButton.addEventListener("click", (t) => {
   toggleForm(t);
@@ -43,16 +47,101 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function sendEmail() {
-  Email.send({
-    Host: "smtp.gmail.com",
-    Username: "sender@email_address.com",
-    Password: "Enter your password",
-    To: "receiver@email_address.com",
-    From: "sender@email_address.com",
-    Subject: "Sending Email using javascript",
-    Body: "Well that was easy!!",
-  }).then(function (message) {
-    alert("mail sent successfully");
+function handleNavItemClick(event) {
+  if (event.target === subDropdown) {
+    event.stopPropagation();
+  } else {
+    const bsCollapse = new bootstrap.Collapse(navbar, {
+      toggle: true,
+    });
+  }
+}
+
+function handleDocumentClick(event) {
+  if (
+    !navbar.contains(event.target) &&
+    !event.target.classList.contains("navbar-toggler")
+  ) {
+    collapseNavbar();
+  }
+}
+
+function collapseNavbar() {
+  if (navbar.classList.contains("show")) {
+    const bsCollapse = new bootstrap.Collapse(navbar, {
+      toggle: true,
+    });
+  }
+}
+
+function addEventListeners() {
+  navItems.forEach((item) => {
+    item.addEventListener("click", handleNavItemClick);
+  });
+
+  document.addEventListener("click", handleDocumentClick);
+  navbarToggler.addEventListener("click", (event) => {
+    event.stopPropagation();
   });
 }
+
+function removeEventListeners() {
+  navItems.forEach((item) => {
+    item.removeEventListener("click", handleNavItemClick);
+  });
+
+  document.removeEventListener("click", handleDocumentClick);
+  navbarToggler.removeEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+}
+
+function checkScreenSize() {
+  if (window.matchMedia("(max-width: 992px)").matches) {
+    // Adjust the breakpoint as needed
+    addEventListeners();
+  } else {
+    removeEventListeners();
+  }
+}
+
+// Initial check
+checkScreenSize();
+
+// Check screen size on resize
+window.addEventListener("resize", checkScreenSize);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentUrl = window.location.href;
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  let isMatched = false; // Flag to track if currentUrl is matched
+
+  // Set active state on page load
+  navLinks.forEach((link) => {
+    if (link.href === currentUrl) {
+      link.classList.add("active");
+      link.parentElement.classList.add("active"); // Optionally add 'active' class to parent <li>
+    }
+  });
+
+  // If no currentUrl is matched, make the first one active
+  if (!isMatched) {
+    navLinks[0].classList.add("active");
+    navLinks[0].parentElement.classList.add("active");
+  }
+
+  // Update active state on click
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      // Remove 'active' class from all links and their parent <li>
+      navLinks.forEach((item) => {
+        item.classList.remove("active");
+        item.parentElement.classList.remove("active");
+      });
+
+      // Add 'active' class to the clicked link and its parent <li>
+      link.classList.add("active");
+      link.parentElement.classList.add("active");
+    });
+  });
+});
