@@ -59,6 +59,10 @@ body {
 }
 
 /* MAIN PROPERTIES */
+.nav_bar {
+  user-select: none;
+}
+
 .home-cont {
   background-color: var(--background);
 }
