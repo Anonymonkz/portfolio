@@ -76,11 +76,13 @@ body {
 .works-cont {
   background-color: var(--backgroundW);
   color: var(--textW);
+  user-select: none;
 }
 
 .contact-cont {
   background-color: var(--backgroundC);
   color: var(--textC);
+  user-select: none;
 }
 
 .content {
@@ -391,7 +393,7 @@ img.cr {
 
 .information-card img:hover {
   transform: translateY(-2px);
-  box-shadow: 0 2px 2px 3px var(--backgroundC);
+  box-shadow: 0 2px 2px 3px #000000;
 }
 
 a {
@@ -416,6 +418,7 @@ a {
   background-position-y: 30%;
   color: rgb(129, 173, 214);
   font-weight: 700;
+  user-select: none;
 }
 
 .footer p {
