@@ -65,6 +65,7 @@ body {
 
 .home-cont {
   background-color: var(--background);
+  user-select: none;
 }
 
 .about-cont {
