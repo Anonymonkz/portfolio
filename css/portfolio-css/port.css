@@ -168,6 +168,24 @@ ul {
   user-select: none;
 }
 
+a.here {
+  color: var(--textA); /* Ensure --textA has a default value */
+  user-select: none !important;
+  text-decoration: none;
+}
+
+.here span {
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.5s ease-out;
+}
+
+.here span:hover {
+  font-size: 30px;
+}
+
+
+
 /* SKILLS */
 .skills-cont h1 {
   font-weight: 700;
