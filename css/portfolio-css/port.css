@@ -295,6 +295,8 @@ a.here {
   display: flex;
   align-items: center;
   position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .works-container {
@@ -314,13 +316,37 @@ a.here {
   height: auto;
 }
 
+/* Ensure the button container is centered and takes full width */
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 15px; /* Spacing between buttons */
+  align-items: center;
+  width: 100%; /* Ensures the container takes the full width */
+  padding: 0 15px; /* Optional: adds padding to container */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Style for buttons */
 .div-ctrl {
-  position: absolute;
-  top: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px; /* Adjust size as needed */
   border: none;
-  cursor: pointer;
-  z-index: 1;
+  background: transparent;
+  font-size: 1.5rem; /* Adjust size as needed */
+  cursor: pointer; /* Adds pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Optional: Add hover effect */
+.div-ctrl:hover {
+  background: rgba(0, 0, 0, 0.1); /* Light background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .button-container {
+    gap: 10px; /* Adjust spacing for vertical stack if needed */
+  }
 }
 
 #slide-left {
