@@ -1,15 +1,19 @@
-function adjustPaths(basePath) {
-  document.addEventListener("DOMContentLoaded", () => {
-    console.log("Adjusting paths...");
+function adjustPaths(basePath, repoName) {
+  const isGithubPages = window.location.hostname === `${repoName}.github.io`;
+
+  if (isGithubPages) {
+    console.log("On GitHub Pages");
 
     // Helper function to replace path
     function replacePath(element, attribute, regex, replacement) {
       const path = element.getAttribute(attribute);
       if (path) {
         console.log(`Original ${attribute} path:`, path);
-        const newPath = path.replace(regex, replacement);
-        element.setAttribute(attribute, newPath);
-        console.log(`Adjusted ${attribute} path:`, newPath);
+        element.setAttribute(attribute, path.replace(regex, replacement));
+        console.log(
+          `Adjusted ${attribute} path:`,
+          element.getAttribute(attribute)
+        );
       }
     }
 
@@ -30,10 +34,12 @@ function adjustPaths(basePath) {
       replacePath(el, "href", /^\/pages\//, `${basePath}/pages/`);
       replacePath(el, "href", /^\/assets\//, `${basePath}/assets/`);
     });
-
-    console.log("Paths adjusted.");
-  });
+  } else {
+    console.log("Not on GitHub Pages");
+  }
 }
 
-// Call the function with the appropriate base path
-adjustPaths("/portfolio");
+// Call the function with the appropriate parameters
+document.addEventListener("DOMContentLoaded", () => {
+  adjustPaths("/portfolio", "anonymonkz");
+});
