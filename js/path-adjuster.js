@@ -22,6 +22,7 @@ function adjustPaths(basePath, repoName) {
       replacePath(el, "href", /^\/css\//, `${basePath}/css/`);
       replacePath(el, "href", /^\/assets\//, `${basePath}/assets/`);
       replacePath(el, "src", /^\/pages\//, `${basePath}/pages/`);
+      replacePath(el, "href", /^\/pages\//, `${basePath}/pages/`);
     });
 
     // Adjust JavaScript paths
@@ -37,6 +38,8 @@ function adjustPaths(basePath, repoName) {
       .forEach((el) => {
         replacePath(el, "src", /^\/assets\//, `${basePath}/assets/`);
         replacePath(el, "src", /^\/pages\//, `${basePath}/pages/`);
+        replacePath(el, "href", /^\/assets\//, `${basePath}/assets/`);
+        replacePath(el, "href", /^\/pages\//, `${basePath}/pages/`);
       });
 
     // Adjust page links
