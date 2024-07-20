@@ -15,7 +15,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="css/portfolio-css/port.css" />
+    <link rel="stylesheet" href="/css/portfolio-css/port.css" />
     <script defer src="js/portfolio-js/port.js"></script>
     <script
       src="https://kit.fontawesome.com/52d58158d7.js"
@@ -24,11 +24,12 @@
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <!-- <script defer src="eMailer.js"></script> -->
     <title>Luis Guerrero - Portfolio</title>
+    <base href="/portfolio" />
   </head>
   <body>
     <nav class="nav_bar navbar navbar-expand-lg fixed-top navbar-dark">
       <div class="container-fluid">
-        <a class="navbr navbar-brand" href="#home"
+        <a class="navbr navbar-brand" href="/#home"
           ><img
             src="assets/portfolio-assets/name-logo.png"
             alt="logo"
@@ -48,13 +49,13 @@
         <div class="navbar-collapse collapse" id="navbarWithDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
+              <a class="nav-link" aria-current="page" href="/#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="/#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
+              <a class="nav-link" href="/#skills">Skills</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -71,8 +72,8 @@
                 class="dropdown-menu dropdown-menu-lg-end"
                 aria-labelledby="navbarDropdownMenuLink"
               >
-                <li><a class="dropdown-item" href="#works">Works</a></li>
-                <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                <li><a class="dropdown-item" href="/#works">Works</a></li>
+                <li><a class="dropdown-item" href="/#contact">Contact</a></li>
                 <li>
                   <a
                     class="dropdown-item disabled"
@@ -127,7 +128,7 @@
           </div>
           <div class="col-md-8">
             <img
-              src="assets/portfolio-assets/home.png"
+              src="/assets/portfolio-assets/home.png"
               alt="background-image"
               class="background-img"
             />
@@ -141,7 +142,7 @@
         <div class="row">
           <div class="col-md-4">
             <img
-              src="assets/portfolio-assets/about.png"
+              src="/assets/portfolio-assets/about.png"
               alt="Programmer"
               class="background-img"
             />
@@ -151,7 +152,11 @@
             <p class="about-content">
               I started programming when I was 1st year college back in 2019,<br />I
               began with studying C language, then I transitioned to <br />Web
-              Development during my 2nd year until I graduated college. <br> A list of my skill set can be found <a href="https://roadmap.sh/u/luis" target="_blank" class="here"><span>Here</span></a>
+              Development during my 2nd year until I graduated college. <br />
+              A list of my skill set can be found
+              <a href="https://roadmap.sh/u/luis" target="_blank" class="here"
+                ><span>Here</span></a
+              >
             </p>
           </div>
         </div>
@@ -280,54 +285,86 @@
             <h1 class="label">Works</h1>
           </div>
         </div>
-        <div class="container works">
-          <div class="container-fluid">
-            <div class="row col-sm-12">
-              <div class="text-center col-md-6">
-                <h3 class="text-center">
-                  App Manager <small>- Open Source</small>
-                </h3>
-                <p class="description">
-                  The App Manager is a versatile suite designed to streamline
-                  your digital experience. It includes a Shortcut Manager for
-                  quick access to your favorite apps, a Music Playlist for
-                  creating and enjoying personalized music collections, and
-                  EmuPortal for easy management of emulators and ROMs.
-                  Additionally, the Retarded Calculator offers a quirky and
-                  humorous take on everyday calculations.
-                </p>
-                <ul class="skills">
-                  <li><b>Role:</b> Front-End Web Developer</li>
-                  <li><b>Technology Used:</b> Bootstrap / Javascript</li>
-                </ul>
+        <div class="works-wrapper">
+          <button class="div-ctrl" id="slide-left">
+            <i class="fa-solid fa-circle-chevron-left fa-2xl"></i>
+          </button>
+          <div class="works-container">
+            <div class="work-item">
+              <div class="row col-sm-12">
+                <div class="text-center col-md-6">
+                  <h3 class="text-center">
+                    App Manager <small>- Personal Project</small>
+                  </h3>
+                  <p class="description">
+                    The App Manager is a versatile suite designed to streamline
+                    your digital experience. It includes a Shortcut Manager for
+                    quick access to your favorite apps, a Music Playlist for
+                    creating and enjoying personalized music collections, and
+                    EmuPortal for easy management of emulators and ROMs.
+                    Additionally, the Retarded Calculator offers a quirky and
+                    humorous take on everyday calculations.
+                  </p>
+                  <ul class="works">
+                    <li><b>Role:</b> Front-End Web Developer</li>
+                    <li><b>Technology Used:</b> Bootstrap / Javascript</li>
+                  </ul>
+                </div>
+                <div class="text-center col-sm-12 col-md-6">
+                  <img
+                    src="/assets/portfolio-assets/work1.PNG"
+                    alt="App Manager Preview"
+                    class="work-card"
+                  />
+                  <a
+                    href="/pages/main-page/main.html"
+                    class="w-btn-link"
+                    target="_blank"
+                  >
+                    <button class="w-btn btn-outline mt-5">View</button>
+                  </a>
+                </div>
               </div>
-              <div class="text-center col-sm-12 col-md-6">
-                <img
-                  src="assets/portfolio-assets/work1.PNG"
-                  alt="App Manager Preview"
-                  class="work-card"
-                />
-                <a
-                  href="/pages/main-page/main.html"
-                  class="w-btn-link"
-                  target="_blank"
-                  ><button class="w-btn btn-outline mt-5">View</button></a
-                >
+            </div>
+            <!-- Repeat similar blocks for other works -->
+            <div class="work-item">
+              <div class="row col-sm-12">
+                <div class="text-center col-md-6">
+                  <h3 class="text-center">
+                    D' Pastries Corner <small>- Pastry Business Website</small>
+                  </h3>
+                  <p class="description">
+                    D' Pastries Corner is a modern and engaging website designed
+                    to showcase a delightful pastry business. Built with React,
+                    Vite, and JavaScript, this site provides an interactive and
+                    visually appealing experience that highlights the quality of
+                    the pastries and the team behind the brand.
+                  </p>
+                  <ul class="works">
+                    <li><b>Role:</b> Lead Developer</li>
+                    <li><b>Technology Used:</b> React / Node.js</li>
+                  </ul>
+                </div>
+                <div class="text-center col-sm-12 col-md-6">
+                  <img
+                    src="/assets/portfolio-assets/work2.PNG"
+                    alt="Project X Preview"
+                    class="work-card"
+                  />
+                  <a
+                    href="https://anonymonkz.github.io/dpastriescorner/"
+                    class="w-btn-link"
+                    target="_blank"
+                  >
+                    <button class="w-btn btn-outline mt-5">View</button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="mt-4 row">
-          <div class="text-center col-md-12">
-            <button class="div-ctrl mr-3">
-              <i class="fa-solid fa-circle-chevron-left fa-2xl"></i>
-            </button>
-            <button class="div-ctrl mr-3">
-              <i class="fa-solid fa-circle-chevron-right fa-2xl"></i>
-            </button>
-          </div>
+          <button class="div-ctrl" id="slide-right">
+            <i class="fa-solid fa-circle-chevron-right fa-2xl"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -436,7 +473,7 @@
                       <a href="https://www.facebook.com/luis.guerrero036">
                         <img
                           class="cr"
-                          src="assets/portfolio-assets/facebook-svgrepo-com (2).svg"
+                          src="/assets/portfolio-assets/facebook-svgrepo-com (2).svg"
                           alt="facebook-logo"
                         />
                       </a>
@@ -445,14 +482,14 @@
                       >
                         <img
                           class="cr"
-                          src="assets/portfolio-assets/linkedin-svgrepo-com (1).svg"
+                          src="/assets/portfolio-assets/linkedin-svgrepo-com (1).svg"
                           alt=""
                         />
                       </a>
                       <a href="https://discordapp.com/users/609690395353284608">
                         <img
                           class="cr"
-                          src="assets/portfolio-assets/discord-svgrepo-com.svg"
+                          src="/assets/portfolio-assets/discord-svgrepo-com.svg"
                           alt=""
                         />
                       </a>

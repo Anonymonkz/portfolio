@@ -184,8 +184,6 @@ a.here {
   font-size: 30px;
 }
 
-
-
 /* SKILLS */
 .skills-cont h1 {
   font-weight: 700;
@@ -279,6 +277,9 @@ a.here {
 .works li::before {
   color: var(--accentW);
   margin: 5px;
+  content: "\►";
+  font-weight: 700;
+  margin: 0 5px 0 0;
 }
 
 .works-cont h1 {
@@ -288,6 +289,54 @@ a.here {
 
 .works-cont h3 {
   color: var(--secondaryW);
+}
+
+.works-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.works-container {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.work-item {
+  flex: 0 0 100%; /* Ensure each work-item takes up the full width */
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.work-card {
+  width: 100%;
+  height: auto;
+}
+
+.div-ctrl {
+  position: absolute;
+  top: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#slide-left {
+  left: 0;
+}
+
+#slide-right {
+  right: 0;
+}
+
+.div-ctrl:hover {
+  background: transparent;
+}
+
+.div-ctrl i {
+  font-size: 2rem;
 }
 
 .div-ctrl {

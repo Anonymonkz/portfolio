@@ -145,3 +145,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".works-container");
+  const leftButton = document.getElementById("slide-left");
+  const rightButton = document.getElementById("slide-right");
+
+  leftButton.addEventListener("click", () => {
+    container.scrollBy({
+      left: -container.clientWidth,
+      behavior: "smooth",
+    });
+  });
+
+  rightButton.addEventListener("click", () => {
+    container.scrollBy({
+      left: container.clientWidth,
+      behavior: "smooth",
+    });
+  });
+});
