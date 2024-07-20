@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isGithubPages = window.location.hostname === "yourusername.github.io";
+  const isGithubPages = window.location.hostname === "anonymonkz.github.io";
 
   if (isGithubPages) {
     console.log("On GitHub Pages");
