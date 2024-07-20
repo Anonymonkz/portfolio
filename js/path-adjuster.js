@@ -1,5 +1,5 @@
 // Adjust resource paths based on whether the site is served from GitHub Pages
-const isGithubPages = window.location.hostname === "username.github.io";
+const isGithubPages = window.location.hostname === "anonymonkz.github.io";
 
 if (isGithubPages) {
   // Adjust CSS paths
