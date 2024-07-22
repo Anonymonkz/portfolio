@@ -156,11 +156,6 @@
 
   window.EJS_emulator = new EmulatorJS(EJS_player, config);
   window.EJS_adBlocked = (url, del) => window.EJS_emulator.adBlocked(url, del);
-  if (typeof window.EJS_player === "undefined") {
-    console.error("EJS_player is not defined");
-    return; // Exit the function or handle the error appropriately
-  }
-
   if (typeof window.EJS_ready === "function") {
     window.EJS_emulator.on("ready", window.EJS_ready);
   }
