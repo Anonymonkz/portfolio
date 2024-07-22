@@ -17,6 +17,14 @@ function adjustPaths(basePath, repoName) {
       }
     }
 
+    // Adjust Icon Paths
+    document.querySelectorAll('link[rel="icon"]').forEach((el) => {
+      replacePath(el, "href", /^\/css\//, `${basePath}/css/`);
+      replacePath(el, "href", /^\/assets\//, `${basePath}/assets/`);
+      replacePath(el, "src", /^\/pages\//, `${basePath}/pages/`);
+      replacePath(el, "href", /^\/pages\//, `${basePath}/pages/`);
+    });
+
     // Adjust CSS paths
     document.querySelectorAll('link[rel="stylesheet"]').forEach((el) => {
       replacePath(el, "href", /^\/css\//, `${basePath}/css/`);
