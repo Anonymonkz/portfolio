@@ -2,7 +2,7 @@
 
 body {
   /* background-color: rgba(14, 32, 59, 0.678) !important; */
-  background-image: url("../assets/video_preview.gif");
+  background-image: url("/pages/sub-pages/shortcut-mng/assets/video_preview.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

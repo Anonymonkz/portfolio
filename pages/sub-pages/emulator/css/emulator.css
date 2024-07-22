@@ -7,7 +7,7 @@ body {
   width: 100vw;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   /* background-color: rgb(56, 56, 56); */
-  background-image: url(../assets/video_preview.gif);
+  background-image: url(/pages/sub-pages/emulator/assets/video_preview.gif);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
